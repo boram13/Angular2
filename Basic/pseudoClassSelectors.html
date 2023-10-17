@@ -4,32 +4,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width , initial-scale=1.0">
-    <title> First table</title>
+    <title> Pseudo selectors</title>
+    <!--this will change the color of the button when we hover into it -->
     <style>
-        h1{
-            background-color: rgb(148, 32, 148);
-        }
-        .redBackground{
-            background-color: red;
-        }
-        #changeColor{
-            color:rgb(143, 104, 104);
-        }
-        *{
-            color: yellowgreen;
-        }
-        div h1{
-            color:brown;
-        }
+       button:hover{
+        background-color: red;
+        color:white;
+       }
+       button:active{
+        background-color: rgb(107, 28, 160);
+     
+       }
+       a:visited{
+        color:rgb(150, 131, 168)
+       }
+       input:focus{
+        color:black;
+        background-color: yellow;
+       }
+
+       p:first-child{
+        background-color: rgb(172, 34, 10);
+       }
     </style>
 
 </head>
 <body>
-<div>
-    <h1>Language</h1>
-</div>
-    <h1>First table</h1>
-    <h2 class="redBackground"> Country and Literacy </h2>
-    <h3 id="changeColor"> Tests</h1>
-</body>   
+
+    <p>one</p>
+    <p>two</p>
+    <p>three</p>
+    <p>four</p>
+    <div>
+        <p>five</p>
+        <p>six</p>
+        <p>seven</p>
+        <p>eight</p>
+    </div>
+    <button>
+        Click Me
+    </button>
+    <a href="####">
+        Click Here
+    </a>
+    <input type="text"/>
+
+</body>
 </html>
