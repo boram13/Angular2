@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    <title> AJAX </title>
+   <style>
+    
+   </style>
+</head>
+<body>
+
+    <h1> Using AJAX to load content dynamically </h1>
+    <h2> Users </h2>
+    <ul id="userList"></ul>
+    <script>
+    //AJAX or Asynchronous JavaScript and XML is a technique used in web development to load content dynamically without
+    // requiring a full page refresh. This technique allows web pages to load new content or data from the server in the background
+    // without interrupting the user's current interaction with the page. In this example we use AJAX to load a list of users from the 
+    //JSON placeholder API and we are displaying them on a web page
+        
+       const userList =document.querySelector('#userList');
+       const xhr =  new XMLHttpRequest();
+
+       xhr.onreadystatechange = function(){
+        if(xhr.readyState === XMLHttpRequest.DONE){
+            if(xhr.status === 200){
+                const userData = JSON.parse(xhr.responseText);
+    // we start by using XML Http request object to create a new Http request and then we define a callback function to handle the 
+    //response when it is received from the server
+                userData.forEach((user) => {
+                    
+                    const newUser = document.createElement('li');
+                    const newUserText = document.createTextNode(user.name);
+
+                    newUser.appendChild(newUserText);
+                    userList.appendChild(newUser);
+                                 
+                });
+            }else{
+                console.log('There was a problem with the request')
+            }
+        }
+       }
+
+       xhr.open('GET', 'https://jsonplaceholder.typicode.com/users')
+       xhr.send()
+    </script>
+</body>
+</html>
