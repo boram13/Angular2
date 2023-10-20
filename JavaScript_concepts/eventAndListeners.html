@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    <title> Events </title>
+   
+</head>
+<body>
+    <h1> Events and event Listeners </h1>
+    <h3>Events in JavaScript refers to actions or occurrences that happen on a web page, such as a mouse click, a keyboard press, or a page load.Events are important
+        in JavaScript because they allow us to create dynamic and interactive web pages. That means without events, web pages would be static and unresponsive. </h3>
+    <h3>Event listeners are functions that are called when a particular event is triggered. </h3>
+    
+    <!-- <button id="myButton"> Click Me! </button> -->
+
+    <input id="searchBox" type="text"/>
+
+    <script>
+        
+        // const button = document.querySelector('#myButton');
+
+        // Next we can attach an event listener. So we can say button.addEventListener. It takes two arguments. First, the type of the event that is click in our case, 
+        // and a callback function. This callback function runs as soon as it triggers this particular event. 
+        
+        
+        // button.addEventListener('click',() =>{
+        //     alert("Hello World")
+        // })
+
+        //*key press events 
+
+        const searchBox = document.querySelector('#searchBox');
+
+        searchBox.addEventListener('keyup',() => {
+            console.log('event triggered')
+        })
+
+    </script>
+</body>
+</html>

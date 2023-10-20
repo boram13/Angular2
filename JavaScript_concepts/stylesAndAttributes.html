@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    <title> DOM </title>
+   
+</head>
+<body>
+    <h1> DOM Manipulation</h1>
+
+    <div>
+
+        <span id="one" name="first"> First span</span>
+        <span id="two" name="second"> Second span</span>
+   
+    </div>
+   
+    <script>
+    
+        const div = document.querySelector('div');
+
+        const spanOne = document.getElementById('one');
+
+        const spanTwo = document.getElementById('two');
+
+//to get attribute
+
+        console.log(spanOne.getAttribute('name'))
+
+        //we want to change the name 
+        spanOne.setAttribute('name', 'abcde')
+
+        //remove the attribute
+        spanOne.removeAttribute('name')
+
+        //give an another id to the span one
+        spanOne.id = 'anyText'
+
+        //add class or change
+        spanTwo.classList.add('new-class')
+
+        //remove the class
+        spanTwo.classList.remove('new-class')
+
+//the style property
+        spanOne.style.color = 'red';
+        spanTwo.style.backgroundColor = 'green';
+
+    </script>
+</body>
+</html>
